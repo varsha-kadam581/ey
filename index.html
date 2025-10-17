@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple HTML-only Form</title>
+</head>
+<body>
+  <h1>Employee Registration</h1>
+
+  <!-- form uses only HTML. action is placeholder (#) -->
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label>First name:</label>
+      <input type="text" placeholder="First name">
+      <br><br>
+
+      <label>Last name:</label>
+      <input name="last_name" type="text" placeholder="Last name">
+      <br><br>
+
+      <label>Email:</label>
+      <input name="email" type="email" placeholder="you@example.com">
+      <br><br>
+
+      <label>Phone:</label>
+      <input name="phone" type="tel" placeholder="e.g. 9876543210">
+      <br><br>
+
+      <label>Date of birth:</label>
+      <input name="dob" type="date">
+      <br><br>
+
+      <label>Gender:</label>
+      <input name="gender" type="radio" value="male">
+      <label>Male</label>
+
+      <input name="gender" type="radio" value="female">
+      <label>Female</label>
+
+      <input name="gender" type="radio" value="other">
+      <label>Other</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Job Details</legend>
+
+      <label>Position applying for:</label>
+      <input name="position" type="text" placeholder="Choose or type">
+      <datalist>
+        <option value="Front-end Developer">
+        <option value="Back-end Developer">
+        <option value="Full-stack Developer">
+        <option value="Designer">
+        <option value="Manager">
+      </datalist>
+      <br><br>
+
+      <label>Years of experience:</label>
+      <input name="experience" type="number" min="0" max="50" value="0">
+      <br><br>
+
+      <label>Employment type:</label>
+      <select>
+        <option value="fulltime">Full-time</option>
+        <option value="parttime">Part-time</option>
+        <option value="intern">Intern</option>
+        <option value="contract">Contract</option>
+      </select>
+      <br><br>
+
+      <label>Expected salary (annual):</label>
+      <input name="salary" type="number" placeholder="e.g. 500000">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Skills & Documents</legend>
+
+      <label>Skills (check all that apply):</label>
+      <br>
+      <input name="skills" type="checkbox" value="HTML">
+      <label>HTML</label>
+
+      <input name="skills" type="checkbox" value="CSS">
+      <label>CSS</label>
+
+      <input name="skills" type="checkbox" value="JavaScript">
+      <label>JavaScript</label>
+
+      <input name="skills" type="checkbox" value="Python">
+      <label>Python</label>
+      <br><br>
+
+      <label>Upload resume (PDF):</label>
+      <input name="resume" type="file">
+      <br><br>
+
+      <label>Portfolio URL:</label>
+      <input name="portfolio" type="url" placeholder="https://example.com">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Other</legend>
+
+      <label>Preferred color (HTML input example):</label>
+      <input id="color" name="fav_color" type="color" value="#0000ff">
+      <br><br>
+
+      <label>Tell us about yourself:</label>
+      <br>
+      <textarea name="about" rows="5" cols="40" placeholder="Write a short bio..."></textarea>
+      <br><br>
+
+      <label>
+        <input name="terms" type="checkbox">
+        I agree to the terms and conditions.
+      </label>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
